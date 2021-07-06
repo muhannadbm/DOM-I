@@ -41,7 +41,17 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-const mynav = document.querySelector('.container header nav');
+var mynav = document.querySelector('.container header nav');
+
+
+mynav.style.color = 'green';
+var mya = document.createElement('a');
+mya.textContent = 'Prepend list item'
+
+mynav.appendChild(mya);
+
+const mynavlinks = mynav.querySelectorAll('a')
+mynavlinks.forEach(link => link.style.color = 'green')
 
 const services = mynav.querySelector('a:nth-of-type(1)');
 const product = mynav.querySelector('a:nth-of-type(2)');
